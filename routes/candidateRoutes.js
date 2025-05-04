@@ -5,6 +5,7 @@ const Candidate = require('../models/candidate');
 // Create a new candidate
 router.post('/', async (req, res) => {
   try {
+    
     const candidate = await Candidate.create(req.body);
     res.status(201).json(candidate);
   } catch (error) {

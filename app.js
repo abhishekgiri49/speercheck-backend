@@ -22,6 +22,7 @@ app.use('/api/engineers', engineerRoutes);
 // Database connection and server start
 sequelize.sync()
   .then(() => {
+    
     console.log('Database connected');
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
